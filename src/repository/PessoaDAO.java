@@ -1,6 +1,8 @@
 package repository;
 
 import model.Pessoa;
+import model.PessoaJuridica;
+import model.TipoPessoa;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +11,30 @@ public final class PessoaDAO implements IGenericDAO<Pessoa> {
 
     static List<Pessoa> pessoas = new ArrayList<>();
 
+
+    public void init(){
+        if (pessoas.isEmpty()){
+            PessoaJuridica pessoaJuridica = new PessoaJuridica();
+            pessoaJuridica.setNome("Bruuno");
+            pessoaJuridica.setCnpj("212123132");
+            pessoaJuridica.setTipo(TipoPessoa.JURIDICA);
+
+            PessoaJuridica pessoaJuridica2 = new PessoaJuridica();
+            pessoaJuridica2.setNome("Bruuno");
+            pessoaJuridica2.setCnpj("212123132");
+            pessoaJuridica2.setTipo(TipoPessoa.JURIDICA);
+
+            PessoaJuridica pessoaJuridica3 = new PessoaJuridica();
+            pessoaJuridica3.setNome("Bruuno");
+            pessoaJuridica3.setCnpj("212123132");
+            pessoaJuridica3.setTipo(TipoPessoa.JURIDICA);
+
+            pessoas.add(pessoaJuridica);
+            pessoas.add(pessoaJuridica2);
+            pessoas.add(pessoaJuridica3);
+
+        }
+    }
 
     @Override
     public void salvar(Pessoa pessoa) {
@@ -29,6 +55,7 @@ public final class PessoaDAO implements IGenericDAO<Pessoa> {
 
     @Override
     public List<Pessoa> buscarTodos() {
+        init();
         System.out.println(pessoas);
         return pessoas;
     }

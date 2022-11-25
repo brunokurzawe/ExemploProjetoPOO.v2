@@ -20,12 +20,12 @@ public final class PessoaDAO implements IGenericDAO<Pessoa> {
             pessoaJuridica.setTipo(TipoPessoa.JURIDICA);
 
             PessoaJuridica pessoaJuridica2 = new PessoaJuridica();
-            pessoaJuridica2.setNome("Bruuno");
+            pessoaJuridica2.setNome("Julia");
             pessoaJuridica2.setCnpj("212123132");
             pessoaJuridica2.setTipo(TipoPessoa.JURIDICA);
 
             PessoaJuridica pessoaJuridica3 = new PessoaJuridica();
-            pessoaJuridica3.setNome("Bruuno");
+            pessoaJuridica3.setNome("Maria Luiza");
             pessoaJuridica3.setCnpj("212123132");
             pessoaJuridica3.setTipo(TipoPessoa.JURIDICA);
 
